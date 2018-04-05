@@ -1,7 +1,7 @@
-const electron = require('electron');
-const { ipcRenderer } = electron;
+window.$ = window.jQuery = require(`${__dirname}/../node_modules/jquery/dist/jquery.js`);
 
-var btOk = document.querySelector("#btOk");
-btOk.addEventListener('click', () => {
-    alert('ok');
+$(document).ready(function(){
+    $("#btOk").click(function(){
+        alert('hello');
+    });
 });
