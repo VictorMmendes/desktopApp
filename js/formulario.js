@@ -6,7 +6,18 @@ $(document).ready(function(){
     });
 
     $("#confirm").click(function(){
-        alert('confirm');
+
+        var tit = $('#tit').val();
+        var desc = $('#desc').val();
+
+        var ind = arrayTarefas.length;
+        arrayTarefas[ind] = {
+        	titulo:tit,
+        	descricao:desc,
+        	status: 1
+        };
+
+        $('.pane-conteudo').load('principal.html');
     });
 
     $(".form-act").submit(function( event ) {
